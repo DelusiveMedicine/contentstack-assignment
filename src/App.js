@@ -17,12 +17,12 @@ function App() {
       <Switch>
         <Route
           exact
-          path="/"
+          path={`${process.env.REACT_APP_BASE_URL}/`}
           render={(renderProps) => <Home {...renderProps} />}
         />
         <Route
           exact
-          path="/:id"
+          path={`${process.env.REACT_APP_BASE_URL}/:id`}
           render={(renderProps) => <BookDetails {...renderProps} />}
         />
         {/* <Route
