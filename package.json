@@ -45,6 +45,7 @@
       "last 1 safari version"
     ]
   },
+  "homepage": "https://delusivemedicine.github.io/contentstack-assignment/",
   "devDependencies": {
     "eslint": "^7.27.0",
     "eslint-plugin-react": "^7.24.0"
