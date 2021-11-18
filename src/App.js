@@ -11,18 +11,20 @@ import BookDetails from "./pages/book-details.jsx"
 import "./styles/third-party.css"
 import "./styles/style.css"
 
+const BASE_URL = "contentstack-assignment/"
+
 function App() {
   return (
     <div className="App">
       <Switch>
         <Route
           exact
-          path="/"
+          path={`${BASE_URL}/`}
           render={(renderProps) => <Home {...renderProps} />}
         />
         <Route
           exact
-          path="/:id"
+          path={`${BASE_URL}/:id`}
           render={(renderProps) => <BookDetails {...renderProps} />}
         />
         {/* <Route
