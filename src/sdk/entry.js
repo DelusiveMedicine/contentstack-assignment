@@ -6,9 +6,9 @@ const Stack = contentstack.Stack({
   environment: process.env.REACT_APP_ENVIRONMENT,
 })
 
-// if (process.env.REACT_APP_CUSTOM_HOST) {
-//   Stack.setHost(process.env.REACT_APP_CUSTOM_HOST)
-// }
+if (process.env.REACT_APP_CUSTOM_HOST) {
+  Stack.setHost(process.env.REACT_APP_CUSTOM_HOST)
+}
 
 
 const { ApolloClient, InMemoryCache, HttpLink, from, gql } =  require('@apollo/client');
