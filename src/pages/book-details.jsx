@@ -3,6 +3,7 @@ import { Link } from "react-router-dom"
 import API from "../sdk/entry";
 
 export default function BookDetails(props) {
+    console.log(props);
     const [bookData, setBookData] = useState()
     const [error, setError] = useState({ errorStatus: false, errorCode: undefined, errorData: undefined })
 

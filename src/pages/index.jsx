@@ -6,7 +6,7 @@ import Layout from "../components/layout";
 
 function Home(props) {
   const { history, location: { state: { pageNum: page_num = 1 } = {} } } = props
-
+  
   const [pageNum, setPageNum] = useState(page_num)
   const [entryCount, setEntryCount] = useState(0)
   const [entry, setEntry] = useState()
