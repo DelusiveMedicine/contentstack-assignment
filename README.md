@@ -1,1 +1,0 @@
-https://delusivemedicine.github.io/contentstack-assignment/
