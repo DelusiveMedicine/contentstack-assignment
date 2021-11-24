@@ -1,17 +1,17 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom"
+import { Link, useLocation } from "react-router-dom"
+
 import API from "../sdk/entry";
 
-export default function BookDetails(props) {
-    console.log(props);
+export default function BookDetails() {
+    const { pathname, state: { pageNum } = {} } = useLocation()
+
     const [bookData, setBookData] = useState()
     const [error, setError] = useState({ errorStatus: false, errorCode: undefined, errorData: undefined })
 
     useEffect(async () => {
-        const { match: { url } } = props
-
         try {
-            const [{ book_data }] = await API.getEntryByUrl('book_page', url)
+            const [{ book_data }] = await API.getEntryByUrl('book_page', pathname)
 
             setBookData(book_data)
         } catch (error) {
@@ -28,7 +28,6 @@ export default function BookDetails(props) {
     }
 
     const { amazon_link, book_author, book_cover, book_description, book_pages, book_title } = bookData
-    const { location: { state: { pageNum } } } = props
 
     return (
         <>

@@ -28,37 +28,94 @@ const client = new ApolloClient({
   cache,
 });
 
-function getAllBooks(skipCount = 0) {
-  return client
-  .query({
-    query: gql`query {
-      all_book_page(limit: 5, skip: ${skipCount}, order_by: created_at_ASC) {
-        total
-        items {
-          book_data {
-            amazon_link {
-              href
-            }
-            book_author
-            book_description
-            book_pages
-            book_title
-            book_coverConnection {
-              edges {
-                node {
-                  url
-                }
-              }
+const homeDataQuery = gql`
+  query HomeData($skip: Int, $limit: Int) {
+    all_header {
+      items {
+        navigation_menu {
+          link {
+            href
+            title
+          }
+        }
+        logoConnection {
+          edges {
+            node {
+              filename
+              url
             }
           }
-          url
-          system {
-            uid
-          }
+        }
+        notification_bar {
+          rich_text_editor
+          show_announcement
         }
       }
     }
-    `
+    all_book_page(limit: $limit, skip: $skip, order_by: created_at_ASC) {
+      total
+      items {
+        book_data {
+          amazon_link {
+            href
+          }
+          book_author
+          book_description
+          book_pages
+          book_title
+          book_coverConnection {
+            edges {
+              node {
+                url
+              }
+            }
+          }
+        }
+        url
+        system {
+          uid
+        }
+      }
+    }
+  }
+`
+
+function getAllBooks(skipCount = 0, limit = 5) {
+  return client
+  .query({
+    query: homeDataQuery,
+    variables: {
+      skip: skipCount,
+      limit: limit
+    }
+    // query: gql`query {
+    //   all_book_page(limit: 5, skip: ${skipCount}, order_by: created_at_ASC) {
+    //     total
+    //     items {
+    //       book_data {
+    //         amazon_link {
+    //           href
+    //         }
+    //         book_author
+    //         book_description
+    //         book_pages
+    //         book_title
+    //         book_coverConnection {
+    //           edges {
+    //             node {
+    //               url
+    //             }
+    //           }
+    //         }
+    //       }
+    //       url
+    //       system {
+    //         uid
+    //       }
+    //     }
+    //   }
+    // }
+    // `
   })
 }
 
@@ -105,8 +162,6 @@ function getEntryByUrl(contentTypeUid, entryUrl, referenceFieldPath) {
   })
 }
 
-
-
 export default {
   // /**
   //  *
@@ -148,5 +203,6 @@ export default {
 
   getAllBooks,
   getEntryByUrl,
+  homeDataQuery,
   client
 }

@@ -1,13 +1,17 @@
+import { ApolloProvider } from "@apollo/client"
 import React from "react"
 import ReactDOM from "react-dom"
 import { HashRouter } from "react-router-dom"
 import App from "./App"
 import reportWebVitals from "./reportWebVitals"
+import API from "./sdk/entry"
 
 ReactDOM.render(
-  <HashRouter basename="/">
-    <App />
-  </HashRouter>,
+  <ApolloProvider client={API.client}>
+    <HashRouter basename="/">
+      <App />
+    </HashRouter>
+  </ApolloProvider>,
   document.getElementById("root")
 )
 

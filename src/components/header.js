@@ -28,16 +28,16 @@ export default function Header(props) {
         </label>
         <nav className="menu">
           <ul className="nav-ul header-ul">
-            {/* {header.navigation_menu.map((list) => (
-              <li key={list.label} className="nav-li">
+            {header.navigation_menu.link.map((list) => (
+              <li key={list.title} className="nav-li">
                 <Link
-                  to={list.page_reference[0].url}
-                  className={props.activeTab === list.label ? "active" : ""}
+                  to={list.href}
+                  // className={props.activeTab === list.title ? "active" : ""}
                 >
-                  {list.label}
+                  {list.title}
                 </Link>
               </li>
-            ))} */}
+            ))}
           </ul>
         </nav>
       </div>

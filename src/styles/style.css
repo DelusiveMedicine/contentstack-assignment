@@ -74,7 +74,7 @@ nav ul li a {
 }
 
 header {
-  background: #fff;
+  background: #E6E6FA;
   position: sticky;
   top: 0;
   z-index: 9;
@@ -101,7 +101,7 @@ header nav {
 }
 
 .header-div {
-  height: 70px;
+  height: 120px;
 }
 
 .header-ul {
