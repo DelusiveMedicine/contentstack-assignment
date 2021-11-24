@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/contentstack-assignment/static/css/main.3d0130e1.chunk.css",
-    "main.js": "/contentstack-assignment/static/js/main.78f89634.chunk.js",
-    "main.js.map": "/contentstack-assignment/static/js/main.78f89634.chunk.js.map",
-    "runtime-main.js": "/contentstack-assignment/static/js/runtime-main.922f0811.js",
-    "runtime-main.js.map": "/contentstack-assignment/static/js/runtime-main.922f0811.js.map",
-    "static/js/2.c6463cd8.chunk.js": "/contentstack-assignment/static/js/2.c6463cd8.chunk.js",
-    "static/js/2.c6463cd8.chunk.js.map": "/contentstack-assignment/static/js/2.c6463cd8.chunk.js.map",
-    "static/js/3.85fa80de.chunk.js": "/contentstack-assignment/static/js/3.85fa80de.chunk.js",
-    "static/js/3.85fa80de.chunk.js.map": "/contentstack-assignment/static/js/3.85fa80de.chunk.js.map",
+    "main.css": "/contentstack-assignment/static/css/main.80ef4209.chunk.css",
+    "main.js": "/contentstack-assignment/static/js/main.14fb4142.chunk.js",
+    "main.js.map": "/contentstack-assignment/static/js/main.14fb4142.chunk.js.map",
+    "runtime-main.js": "/contentstack-assignment/static/js/runtime-main.2eb809a0.js",
+    "runtime-main.js.map": "/contentstack-assignment/static/js/runtime-main.2eb809a0.js.map",
+    "static/js/2.243c739c.chunk.js": "/contentstack-assignment/static/js/2.243c739c.chunk.js",
+    "static/js/2.243c739c.chunk.js.map": "/contentstack-assignment/static/js/2.243c739c.chunk.js.map",
+    "static/js/3.913e22e0.chunk.js": "/contentstack-assignment/static/js/3.913e22e0.chunk.js",
+    "static/js/3.913e22e0.chunk.js.map": "/contentstack-assignment/static/js/3.913e22e0.chunk.js.map",
     "index.html": "/contentstack-assignment/index.html",
-    "static/css/main.3d0130e1.chunk.css.map": "/contentstack-assignment/static/css/main.3d0130e1.chunk.css.map",
-    "static/js/2.c6463cd8.chunk.js.LICENSE.txt": "/contentstack-assignment/static/js/2.c6463cd8.chunk.js.LICENSE.txt"
+    "static/css/main.80ef4209.chunk.css.map": "/contentstack-assignment/static/css/main.80ef4209.chunk.css.map",
+    "static/js/2.243c739c.chunk.js.LICENSE.txt": "/contentstack-assignment/static/js/2.243c739c.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.922f0811.js",
-    "static/js/2.c6463cd8.chunk.js",
-    "static/css/main.3d0130e1.chunk.css",
-    "static/js/main.78f89634.chunk.js"
+    "static/js/runtime-main.2eb809a0.js",
+    "static/js/2.243c739c.chunk.js",
+    "static/css/main.80ef4209.chunk.css",
+    "static/js/main.14fb4142.chunk.js"
   ]
 }
